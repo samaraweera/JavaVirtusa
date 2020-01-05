@@ -18,3 +18,28 @@ public class ReverseNumber {
 		System.out.format("\n Reverse of entered number is = %d\n", Reverse);
 }
 }
+
+//Edited File
+
+import java.util.Scanner;
+
+public class Main
+{
+	
+	public static void main(String[] args) {
+	    
+		int number, reminder, reverse;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter Number : ");
+		
+		number = sc.nextInt();
+		
+		for(reverse = 0; number > 0; number = number/10) {
+			reminder = number %10;
+			reverse = reverse * 10 + reminder;
+		}
+		
+		System.out.format("Reverse of entered number is = %d\n", reverse);
+    }
+}
